@@ -1,17 +1,26 @@
-
-import './App.css';
-import Header from './Components/Header/Header';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import Home from "./Components/Home/Home";
 
 function App() {
   return (
-    <div className="app">
-      <h1>
-      <Header/>
-
-      </h1>
-      
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Routes>
+          <Route path="/">
+            
+            
+          </Route>
+          <Route path="/checkout">
+            <Header />
+            <Home />
+          </Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
